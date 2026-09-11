@@ -18,4 +18,7 @@ fn main() {
     if c % 2 != 0 {
         println!("Impar, eu acho");
     }
+    for n in  i32 10 {
+        println!("{}", n);
+    }
 }
