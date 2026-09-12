@@ -1,3 +1,5 @@
+use std::io;
+
 fn main() {
    fn lambda(um: i128, dois: i128) -> i128 {
         um + dois
@@ -34,6 +36,25 @@ for n in 1..=20 {
     } else {
         println!("{n}");
 }
+}
+    let mut inventory:  Vec<&str> = Vec::new();
+    inventory.push(&("Sword"));
+    inventory.push(&("Poção"));
+    inventory.push(&("Dinheiro"));
+
+    println!("Inventário {:?}", inventory);
+    println!("Tamanho: {}", inventory.len());
+
+    let mut inventory2: Vec<String> = Vec::new();
+    loop {
+        let mut pusher = String::new();
+        io::stdin().read_line(&mut pusher).expect("Inválido");
+    
+        if pusher.trim() == "end" {
+            break;
+        }
+    
+    inventory2.push(pusher.trim().to_string());  
 }
 }
 // Cortei parte do código pra ficar menor e reduzir o tempo de compilação
